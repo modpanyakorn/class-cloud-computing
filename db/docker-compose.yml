@@ -8,8 +8,6 @@ services:
         - "27017:27017"
       volumes:
         - mongodb_data:/data/db
-      networks:
-        - chat_app_network
       
 volumes:
   mongodb_data:
