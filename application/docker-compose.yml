@@ -24,8 +24,6 @@ services:
     build: ./server
     env_file:
       - ./server/.env
-    depends_on:
-      - mongo
     networks:
       - chat_app_network
 
@@ -39,8 +37,6 @@ services:
       - ME_CONFIG_MONGODB_PORT=27017
       - ME_CONFIG_BASICAUTH_USERNAME=admin
       - ME_CONFIG_BASICAUTH_PASSWORD=1234
-    depends_on:
-      - mongo
     networks:
       - chat_app_network
 
